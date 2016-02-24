@@ -14,6 +14,14 @@ def exponent(base, exp):
     if exp == 0:
         return 1
     return base * exponent(base, exp-1)
+    
+def sqrt(x):
+    root = abs(float(x))
+    while True:
+        if root*root - x > .001:
+            root = (root+(x/root))/2
+        else:
+            return root
 
 def pi(a):
     return 3.1415926535897932384626433832795
