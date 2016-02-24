@@ -13,10 +13,7 @@ def divide(a,b):
 def exponent(base, exp):
     if exp == 0:
         return 1
-    elif exp%2 == 0:
-        return exponent(base*base, exp/2)
-    else:
-        return base * exponent(base, exp-1)
+    return base * exponent(base, exp-1)
 
 def pi(a):
     return 3.1415926535897932384626433832795
