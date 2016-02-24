@@ -18,7 +18,7 @@ def exponent(base, exp):
 def sqrt(x):
     root = abs(float(x))
     while True:
-        if root*root - x > .001:
+        if abs(root*root - x) > .001:
             root = (root+(x/root))/2
         else:
             return root
